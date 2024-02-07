@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+<body>
+    <canvas id="test" width="600" height="600"></canvas>
+    <script>
+        var c =document.getElementById("test");
+        var ct = c.getContext("2d");
+function car(){
+        ct.beginPath();
+        ct.rect(280,345,40,5);
+        ct.fillStyle="red";
+        ct.fill();
+
+        ct.beginPath();
+        ct.rect(265,315,70,18);
+        ct.fillStyle="black";
+        ct.fill();
+
+        ct.beginPath();
+        ct.rect(265,270,70,18);
+        ct.fillStyle="black";
+        ct.fill();
+
+        ct.beginPath();
+        ct.rect(280,250,10,5);
+        ct.fillStyle="yellow";
+        ct.fill();
+
+        ct.beginPath();
+        ct.rect(310,250,10,5);
+        ct.fillStyle="yellow";
+        ct.fill();
+
+        ct.beginPath();
+        ct.moveTo(275,255);
+        ct.lineTo(325,255);
+        ct.quadraticCurveTo(325, 255, 328, 260);
+        ct.lineTo(328,340);
+        ct.quadraticCurveTo(328, 340,325, 345);
+        ct.lineTo(275,345);
+        ct.quadraticCurveTo(272, 340,272, 335);
+        ct.lineTo(272,260);
+        ct.quadraticCurveTo(272,260,275, 255);
+        ct.closePath();
+        ct.fillStyle="blue";
+        ct.fill();
+        ct.strokeStyle="red";
+        ct.stroke();
+}
+
+
+function rectcar(){
+        ct.beginPath();
+        ct.moveTo(275,255);
+        ct.lineTo(325,255);
+        ct.quadraticCurveTo(325, 255, 328, 260);
+        ct.lineTo(328,340);
+        ct.quadraticCurveTo(328, 340,325, 345);
+        ct.lineTo(275,345);
+        ct.quadraticCurveTo(272, 340,272, 335);
+        ct.lineTo(272,260);
+        ct.quadraticCurveTo(272,260,275, 255);
+        ct.closePath();
+        ct.fillStyle="black";
+        ct.fill();
+        ct.strokeStyle="black";
+        ct.stroke();
+        ct.fill();
+        }
+function tlinecar(){
+        ct.beginPath();
+        ct.moveTo(288,265);
+        ct.lineTo(313,265);
+        ct.stroke();
+        ct.beginPath();
+        ct.moveTo(288,269);
+        ct.lineTo(313,269);
+        ct.stroke();
+        ct.moveTo(288,273);
+        ct.lineTo(313,273);
+        ct.stroke();
+        }
+
+function tcar(){
+    ct.setTransform(1,0,0,1,0,0);
+    ct.translate(102,140);
+    ct.scale(0.66,0.56);
+    rectcar();
+
+}
+function imgcar(){
+    car();
+    tlinecar();
+    tcar();
+    bcar();
+}
+imgcar();
+    </script>
+</body>
+</html>     
